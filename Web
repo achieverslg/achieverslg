@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Achievers Care Group</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: white;
+      color: #000;
+    }
+    header {
+      background-color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+    }
+    .logo {
+      color: #d4af37;
+      font-weight: bold;
+      font-size: 1.4em;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: black;
+    }
+    .language-switcher {
+      margin-left: auto;
+    }
+    .language-switcher select {
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background-color: #fff;
+    }
+    .hero h1 {
+      font-size: 2.5em;
+    }
+    .hero p {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+    .hero button {
+      margin-top: 30px;
+      background-color: #d4af37;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1em;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .section {
+      padding: 60px 40px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+    .section div {
+      flex: 1;
+      min-width: 300px;
+    }
+    h2 {
+      color: #d4af37;
+    }
+    .kontakt-formular input, .kontakt-formular textarea {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .kontakt-formular button {
+      background-color: #d4af37;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px;
+    }
+    .image-gallery img {
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #f9f9f9;
+      font-size: 0.9em;
+    }
+    footer a {
+      color: black;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    .section-img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">ACHIEVERS CARE GROUP</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#ueber">Über Uns</a>
+      <a href="#events">Events</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <div class="language-switcher">
+      <select onchange="changeLanguage(this.value)">
+        <option value="de">Deutsch</option>
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+      </select>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1 id="welcome">WILLKOMMEN BEI ACHIEVERS CARE GROUP</h1>
+    <p id="subtitle">Christliche Gemeinschaft und Treffen</p>
+    <button id="discover">JETZT TREFFEN ENTDECKEN</button>
+  </section>
+
+  <section class="section" id="ueber">
+    <div>
+      <h2 id="about-title">ÜBER UNS</h2>
+      <p id="about-text">Achievers Life Group ist eine Gemeinschaftsgruppe des Christ Embassy Berlin Central in Deutschland. Unsere Mission ist es, Generationen von Männern und Frauen zu erziehen, damit sie Gottes Plan verwirklichen und seinen Lebenstraum verwirklichen können. Unsere Freude besteht darin, Leben einen Sinn zu geben, indem wir mit Liebe eine glücklichere Welt schaffen.<br><br>
+      <strong>Unsere Vision</strong><br>
+      Den Nationen und Völkern der Welt die göttliche Gegenwart Gottes nahezubringen und den Charakter des Geistes zu demonstrieren.<br><br>
+      <strong>Unser Glaubensbekenntnis</strong><br>
+      [Der vollständige Glaubensinhalt folgt auf Anfrage.]
+      </p>
+    </div>
+    <div>
+      <img class="section-img" src="https://source.unsplash.com/600x400/?fellowship,church" alt="Über uns Bild">
+    </div>
+  </section>
+
+  <section class="section" id="events">
+    <div>
+      <img class="section-img" src="https://source.unsplash.com/600x400/?church,event" alt="Events Bild">
+    </div>
+    <div>
+      <h2 id="events-title">EVENTS</h2>
+      <p>Hier findest du unsere regelmäßigen Veranstaltungen, Treffen, Gebetsabende und besondere Gottesdienste.</p>
+    </div>
+  </section>
+
+  <section class="section" id="kontakt">
+    <div>
+      <h2 id="contact-title">KONTAKT</h2>
+      <form class="kontakt-formular">
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
+        <textarea rows="5" placeholder="Nachricht"></textarea>
+        <button type="submit" id="send-btn">SENDEN</button>
+      </form>
+    </div>
+    <div>
+      <img class="section-img" src="https://source.unsplash.com/600x400/?prayer,contact" alt="Kontakt Bild">
+    </div>
+  </section>
+
+  <footer>
+    <a href="#" id="footer-impressum">Impressum</a>
+    <a href="#" id="footer-datenschutz">Datenschutzerklärung</a>
+  </footer>
+</body>
+</html>
